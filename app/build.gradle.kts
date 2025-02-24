@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    kotlin("plugin.serialization") version "1.9.20"
 }
 
 android {
@@ -40,6 +41,31 @@ android {
 }
 
 dependencies {
+
+    //coil
+    implementation("io.coil-kt:coil-compose:1.3.1")
+
+    //YCharts
+    implementation("co.yml:ycharts:2.1.0")
+
+    //koin
+    implementation(libs.io.koin.compose)
+    implementation(libs.io.koin.core)
+    implementation(libs.io.koin.android)
+
+    //ktor
+    implementation("io.ktor:ktor-client-core:3.0.3")
+    implementation("io.ktor:ktor-client-cio:3.0.3")
+
+    //supabase
+    implementation(platform("io.github.jan-tennert.supabase:bom:3.1.0"))
+    implementation("io.github.jan-tennert.supabase:postgrest-kt")
+    implementation("io.github.jan-tennert.supabase:auth-kt")
+    implementation("io.github.jan-tennert.supabase:realtime-kt")
+
+
+    //navigation
+    implementation("androidx.navigation:navigation-compose:2.8.5")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
