@@ -47,7 +47,7 @@ fun RegisterPageScreen(navController: NavController, vm: RegisterPageVM = koinVi
     val state = vm.state.value
     LaunchedEffect(key1 = !state.isComplete) {
         if(state.isComplete){
-            navController.navigate(NavRoutes.Home.route)
+            navController.navigate(NavRoutes.Successful.route)
         }
     }
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
