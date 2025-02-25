@@ -8,6 +8,10 @@ import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
 
+//Назначение: объявление koin
+//Дата: 25.02.2025
+//Автор: Неробеев Алексей
+
 class App: Application() {
     override fun onCreate() {
         super.onCreate()

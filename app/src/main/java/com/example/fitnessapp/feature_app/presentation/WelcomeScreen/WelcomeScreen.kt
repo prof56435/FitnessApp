@@ -27,13 +27,38 @@ import com.example.fitnessapp.feature_app.presentation.common.montserratBold
 import com.example.fitnessapp.feature_app.presentation.common.montserratRegular
 import org.koin.androidx.compose.koinViewModel
 
+//Назначение: верстка экрана WelcomeScreen
+//Дата: 25.02.2025
+//Автор: Неробеев Алексей
+
 @Composable
 fun WelcomeScreen(navController: NavController, vm: WelcomeVM = koinViewModel()) {
     val state = vm.state.value
+    vm.onEvent(WelcomeEvent.GetPref)
     vm.onEvent(WelcomeEvent.GoNext)
     LaunchedEffect(key1 = !state.next) {
-        if(state.next){
-            navController.navigate(NavRoutes.OnBoard1.route)
+         if(state.next){
+            when(state.onBNumber){
+                0 ->{
+                    navController.navigate(NavRoutes.OnBoard1.route)
+                    vm.onEvent(WelcomeEvent.SavePref)
+                }
+                1 -> {
+                    navController.navigate(NavRoutes.OnBoard2.route)
+                    vm.onEvent(WelcomeEvent.SavePref)
+                }
+                2 -> {
+                    navController.navigate(NavRoutes.OnBoard3.route)
+                    vm.onEvent(WelcomeEvent.SavePref)
+                }
+                3 -> {
+                    navController.navigate(NavRoutes.OnBoard4.route)
+                    vm.onEvent(WelcomeEvent.SavePref)
+                }
+            }
+        }
+        if(state.onBNumber >= 4){
+            navController.navigate(NavRoutes.Login.route)
         }
     }
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->

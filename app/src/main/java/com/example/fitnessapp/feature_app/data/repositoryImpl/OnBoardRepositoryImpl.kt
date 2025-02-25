@@ -3,6 +3,10 @@ package com.example.fitnessapp.feature_app.data.repositoryImpl
 import android.content.Context
 import com.example.fitnessapp.feature_app.domain.repository.OnBoardRepository
 
+//Написание логики для RepositoryImpl
+//Дата: 25.02.2025
+//Автор: Неробеев Алексей
+
 class OnBoardRepositoryImpl(context: Context): OnBoardRepository {
     val sharedPreferences = context.getSharedPreferences("OnBoardPrefs", 0)
 
