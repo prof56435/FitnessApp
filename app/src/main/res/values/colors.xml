@@ -12,4 +12,7 @@
     <color name="onBText">#B6B4C2</color>
     <color name="startGradient">#226F8F</color>
     <color name="endGradient">#9CE9EE</color>
+    <color name="tfColor">#F7F8F8</color>
+    <color name="placeHolder">#ADA4A5</color>
+    <color name="loginColor">#9CE9EE</color>
 </resources>

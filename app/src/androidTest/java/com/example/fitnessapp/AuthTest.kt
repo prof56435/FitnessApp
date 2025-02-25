@@ -9,6 +9,8 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
 import androidx.navigation.compose.rememberNavController
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.example.fitnessapp.feature_app.domain.usecase.Auth.EmailValidationUseCase
+import com.example.fitnessapp.feature_app.domain.usecase.Auth.PasswordValidationUseCase
 import com.example.fitnessapp.feature_app.presentation.Login.LoginScreen
 import org.junit.Rule
 import org.junit.Test
@@ -23,8 +25,8 @@ class AuthTest {
     private val correctPassword = "password"
     private val incorrectEmail = "qwe"
     private val incorrectPassword = "pass"
-    private val emailValidationUseCase: EmailValidationUseCase
-    private val passwordValidationUseCase: PasswordValidationUseCase
+    private val emailValidationUseCase: EmailValidationUseCase = EmailValidationUseCase()
+    private val passwordValidationUseCase: PasswordValidationUseCase = PasswordValidationUseCase()
 
 
     @Test

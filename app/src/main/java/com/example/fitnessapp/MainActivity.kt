@@ -6,11 +6,13 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.fitnessapp.feature_app.presentation.Home.HomeScreen
 import com.example.fitnessapp.feature_app.presentation.Login.LoginScreen
 import com.example.fitnessapp.feature_app.presentation.OnBoarding.OnBoarding1Screen
 import com.example.fitnessapp.feature_app.presentation.OnBoarding.OnBoarding2Screen
 import com.example.fitnessapp.feature_app.presentation.OnBoarding.OnBoarding3Screen
 import com.example.fitnessapp.feature_app.presentation.OnBoarding.OnBoarding4Screen
+import com.example.fitnessapp.feature_app.presentation.RegisterPage.RegisterPageScreen
 import com.example.fitnessapp.feature_app.presentation.WelcomeScreen.WelcomeScreen
 import com.example.fitnessapp.feature_app.presentation.ui.theme.FitnessAppTheme
 
@@ -31,6 +33,8 @@ class MainActivity : ComponentActivity() {
                     composable(NavRoutes.OnBoard3.route) { OnBoarding3Screen(navController)  }
                     composable(NavRoutes.OnBoard4.route) { OnBoarding4Screen(navController)  }
                     composable(NavRoutes.Login.route) { LoginScreen(navController)  }
+                    composable(NavRoutes.RegisterPage.route) { RegisterPageScreen(navController)  }
+                    composable(NavRoutes.Home.route) { HomeScreen(navController)  }
                 }
             }
         }
