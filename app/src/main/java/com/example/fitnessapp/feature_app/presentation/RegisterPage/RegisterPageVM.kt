@@ -5,12 +5,16 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.fitnessapp.feature_app.domain.usecase.Auth.SignUpUseCase
+import com.example.fitnessapp.feature_app.domain.usecase.Profile.AddFioNumberUseCase
+import com.example.fitnessapp.feature_app.domain.usecase.Profile.AddProfileUseCase
 import com.example.fitnessapp.feature_app.presentation.Login.LoginEvent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class RegisterPageVM(
-    private val signUpUseCase: SignUpUseCase
+    private val signUpUseCase: SignUpUseCase,
+    private val addFioNumberUseCase: AddFioNumberUseCase,
+    private val addProfileUseCase: AddProfileUseCase
 ): ViewModel() {
     private val _state = mutableStateOf(RegisterPageState())
     val state: State<RegisterPageState> = _state
@@ -51,6 +55,8 @@ class RegisterPageVM(
                 viewModelScope.launch(Dispatchers.IO) {
                     try {
                         signUpUseCase.invoke(state.value.email, state.value.password)
+                        addFioNumberUseCase.invoke(state.value.fio, state.value.number)
+                        addProfileUseCase.invoke("Улучшить форму", 180, 65, 22)
                         _state.value = state.value.copy(
                             isComplete = true
                         )

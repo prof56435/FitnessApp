@@ -17,4 +17,8 @@
     <color name="loginColor">#9CE9EE</color>
     <color name="targetText">#7B6F72</color>
     <color name="targetBox">#A5A3B0</color>
+    <color name="buttonGrStart">#226F8F</color>
+    <color name="buttonGrEnd">#9CE9EE</color>
+    <color name="homeText">#226F8F</color>
+    <color name="shadowColor">#1D161712</color>
 </resources>
