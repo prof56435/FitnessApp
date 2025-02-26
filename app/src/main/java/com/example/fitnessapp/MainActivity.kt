@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.fitnessapp.feature_app.presentation.CongratulationsPage.CongratulationsScreen
 import com.example.fitnessapp.feature_app.presentation.Home.HomeScreen
 import com.example.fitnessapp.feature_app.presentation.Login.LoginScreen
 import com.example.fitnessapp.feature_app.presentation.OnBoarding.OnBoarding1Screen
@@ -17,6 +18,9 @@ import com.example.fitnessapp.feature_app.presentation.RegisterPage.RegisterPage
 import com.example.fitnessapp.feature_app.presentation.SuccessRegistration.SuccessRegistrationScreen
 import com.example.fitnessapp.feature_app.presentation.Target.TargetScreen
 import com.example.fitnessapp.feature_app.presentation.WelcomeScreen.WelcomeScreen
+import com.example.fitnessapp.feature_app.presentation.WorkoutDetails1.WorkoutDetails1Screen
+import com.example.fitnessapp.feature_app.presentation.WorkoutDetails2.WorkoutDetails2Screen
+import com.example.fitnessapp.feature_app.presentation.WorkoutTracker.WorkoutTrackerScreen
 import com.example.fitnessapp.feature_app.presentation.ui.theme.FitnessAppTheme
 
 //Назначение: настройка NavHost
@@ -41,6 +45,10 @@ class MainActivity : ComponentActivity() {
                     composable(NavRoutes.Target.route) { TargetScreen(navController)  }
                     composable(NavRoutes.Successful.route){ SuccessRegistrationScreen(navController)}
                     composable(NavRoutes.Profile.route) { ProfileScreen(navController)  }
+                    composable(NavRoutes.WorkoutDet1.route){ WorkoutDetails1Screen(navController)}
+                    composable(NavRoutes.WorkoutTracker.route){ WorkoutTrackerScreen(navController)}
+                    composable(NavRoutes.CongratulationPage.route) { CongratulationsScreen(navController)  }
+                    composable(NavRoutes.WorkoutDetails2.route){ WorkoutDetails2Screen(navController)}
                 }
             }
         }

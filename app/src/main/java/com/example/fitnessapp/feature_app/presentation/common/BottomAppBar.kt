@@ -65,7 +65,7 @@ fun BottomAppBar(navController: NavController, activityNumber: Int) {
                             tint = Color.Unspecified)
                     }
                     IconButton(onClick = {
-
+                        navController.navigate(NavRoutes.WorkoutTracker.route)
                     }) {
                         Icon(painter = painterResource(R.drawable.activity_icon),
                             contentDescription = null,

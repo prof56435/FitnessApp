@@ -21,4 +21,6 @@
     <color name="buttonGrEnd">#9CE9EE</color>
     <color name="homeText">#226F8F</color>
     <color name="shadowColor">#1D161712</color>
+    <color name="workDetBox">#9CE9EE</color>
+    <color name="congrColor">#7B6F72</color>
 </resources>
