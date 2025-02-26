@@ -103,7 +103,7 @@ fun WorkoutDetails2Screen(navController: NavController) {
                     Text(text = "4 Подхода",
                         color = colorResource(R.color.onBText),
                         fontWeight = FontWeight(500),
-                        fontSize = 12.sp,
+                        fontSize = 11.sp,
                         fontFamily = montserratRegular
                     )
                 }
