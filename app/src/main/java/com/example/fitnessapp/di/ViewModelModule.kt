@@ -1,7 +1,9 @@
 package com.example.fitnessapp.di
 
+import com.example.fitnessapp.feature_app.presentation.Home.HomeVM
 import com.example.fitnessapp.feature_app.presentation.Login.LoginVM
 import com.example.fitnessapp.feature_app.presentation.OnBoarding.OnBoardingVM
+import com.example.fitnessapp.feature_app.presentation.Profile.ProfileVM
 import com.example.fitnessapp.feature_app.presentation.RegisterPage.RegisterPageVM
 import com.example.fitnessapp.feature_app.presentation.WelcomeScreen.WelcomeVM
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -22,6 +24,12 @@ val moduleVM = module {
         LoginVM(get(), get(), get())
     }
     viewModel<RegisterPageVM>{
-        RegisterPageVM(get())
+        RegisterPageVM(get(), get(), get())
+    }
+    viewModel<HomeVM>{
+        HomeVM(get())
+    }
+    viewModel<ProfileVM>{
+        ProfileVM(get())
     }
 }

@@ -12,6 +12,7 @@ import com.example.fitnessapp.feature_app.presentation.OnBoarding.OnBoarding1Scr
 import com.example.fitnessapp.feature_app.presentation.OnBoarding.OnBoarding2Screen
 import com.example.fitnessapp.feature_app.presentation.OnBoarding.OnBoarding3Screen
 import com.example.fitnessapp.feature_app.presentation.OnBoarding.OnBoarding4Screen
+import com.example.fitnessapp.feature_app.presentation.Profile.ProfileScreen
 import com.example.fitnessapp.feature_app.presentation.RegisterPage.RegisterPageScreen
 import com.example.fitnessapp.feature_app.presentation.SuccessRegistration.SuccessRegistrationScreen
 import com.example.fitnessapp.feature_app.presentation.Target.TargetScreen
@@ -28,7 +29,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             FitnessAppTheme {
                 val navController = rememberNavController()
-                NavHost(navController, startDestination = NavRoutes.Home.route){
+                NavHost(navController, startDestination = NavRoutes.WelcomeScreen.route){
                     composable(NavRoutes.WelcomeScreen.route) { WelcomeScreen(navController)  }
                     composable(NavRoutes.OnBoard1.route) { OnBoarding1Screen(navController)  }
                     composable(NavRoutes.OnBoard2.route) { OnBoarding2Screen(navController)  }
@@ -39,6 +40,7 @@ class MainActivity : ComponentActivity() {
                     composable(NavRoutes.Home.route) { HomeScreen(navController)  }
                     composable(NavRoutes.Target.route) { TargetScreen(navController)  }
                     composable(NavRoutes.Successful.route){ SuccessRegistrationScreen(navController)}
+                    composable(NavRoutes.Profile.route) { ProfileScreen(navController)  }
                 }
             }
         }
