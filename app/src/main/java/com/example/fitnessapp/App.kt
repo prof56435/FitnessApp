@@ -4,6 +4,7 @@ import android.app.Application
 import com.example.fitnessapp.di.moduleAuth
 import com.example.fitnessapp.di.moduleOnBoard
 import com.example.fitnessapp.di.moduleProfile
+import com.example.fitnessapp.di.moduleSleep
 import com.example.fitnessapp.di.moduleVM
 import com.example.fitnessapp.di.moduleWorkout
 import org.koin.android.ext.koin.androidContext
@@ -23,7 +24,7 @@ class App: Application() {
             androidContext(applicationContext)
             androidLogger(Level.DEBUG)
             modules(
-                moduleVM, moduleOnBoard, moduleAuth, moduleProfile, moduleWorkout
+                moduleVM, moduleOnBoard, moduleAuth, moduleProfile, moduleWorkout, moduleSleep
             )
         }
     }

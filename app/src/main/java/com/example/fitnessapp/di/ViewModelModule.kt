@@ -1,10 +1,13 @@
 package com.example.fitnessapp.di
 
+import com.example.fitnessapp.feature_app.presentation.AddAlarm.AddAlarmVM
 import com.example.fitnessapp.feature_app.presentation.Home.HomeVM
 import com.example.fitnessapp.feature_app.presentation.Login.LoginVM
 import com.example.fitnessapp.feature_app.presentation.OnBoarding.OnBoardingVM
 import com.example.fitnessapp.feature_app.presentation.Profile.ProfileVM
 import com.example.fitnessapp.feature_app.presentation.RegisterPage.RegisterPageVM
+import com.example.fitnessapp.feature_app.presentation.SleepSchedule.SleepScheduleVM
+import com.example.fitnessapp.feature_app.presentation.SleepTracker.SleepTrackerVM
 import com.example.fitnessapp.feature_app.presentation.WelcomeScreen.WelcomeVM
 import com.example.fitnessapp.feature_app.presentation.WorkoutDetails1.WorkoutDetails1VM
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -35,5 +38,14 @@ val moduleVM = module {
     }
     viewModel<WorkoutDetails1VM>{
         WorkoutDetails1VM(get(), get())
+    }
+    viewModel<AddAlarmVM>{
+        AddAlarmVM(get())
+    }
+    viewModel<SleepScheduleVM>{
+        SleepScheduleVM(get())
+    }
+    viewModel<SleepTrackerVM>{
+        SleepTrackerVM(get())
     }
 }

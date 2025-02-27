@@ -40,6 +40,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.fitnessapp.NavRoutes
 import com.example.fitnessapp.R
 import com.example.fitnessapp.feature_app.presentation.common.BottomAppBar
 import com.example.fitnessapp.feature_app.presentation.common.ErrorAlertDialog
@@ -300,6 +301,9 @@ fun HomeScreen(navController: NavController, vm: HomeVM = koinViewModel()) {
                                     contentColor = Color.Transparent
                                 ),
                                 modifier = Modifier
+                                    .clickable {
+                                        navController.navigate(NavRoutes.SleepTracker.route)
+                                    }
                                     .weight(1f)
                                     .height(150.dp)
                                     .background(color = colorResource(R.color.shadowColor).copy(alpha = 0.4f),

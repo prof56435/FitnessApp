@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.fitnessapp.feature_app.presentation.AddAlarm.AddAlarmScreen
 import com.example.fitnessapp.feature_app.presentation.CongratulationsPage.CongratulationsScreen
 import com.example.fitnessapp.feature_app.presentation.Home.HomeScreen
 import com.example.fitnessapp.feature_app.presentation.Login.LoginScreen
@@ -15,6 +16,8 @@ import com.example.fitnessapp.feature_app.presentation.OnBoarding.OnBoarding3Scr
 import com.example.fitnessapp.feature_app.presentation.OnBoarding.OnBoarding4Screen
 import com.example.fitnessapp.feature_app.presentation.Profile.ProfileScreen
 import com.example.fitnessapp.feature_app.presentation.RegisterPage.RegisterPageScreen
+import com.example.fitnessapp.feature_app.presentation.SleepSchedule.SleepScheduleScreen
+import com.example.fitnessapp.feature_app.presentation.SleepTracker.SleepTrackerScreen
 import com.example.fitnessapp.feature_app.presentation.SuccessRegistration.SuccessRegistrationScreen
 import com.example.fitnessapp.feature_app.presentation.Target.TargetScreen
 import com.example.fitnessapp.feature_app.presentation.WelcomeScreen.WelcomeScreen
@@ -49,6 +52,9 @@ class MainActivity : ComponentActivity() {
                     composable(NavRoutes.WorkoutTracker.route){ WorkoutTrackerScreen(navController)}
                     composable(NavRoutes.CongratulationPage.route) { CongratulationsScreen(navController)  }
                     composable(NavRoutes.WorkoutDetails2.route){ WorkoutDetails2Screen(navController)}
+                    composable(NavRoutes.SleepTracker.route) { SleepTrackerScreen(navController) }
+                    composable(NavRoutes.SleepSchedule.route) { SleepScheduleScreen(navController)  }
+                    composable(NavRoutes.AddAlarm.route) { AddAlarmScreen(navController)  }
                 }
             }
         }
